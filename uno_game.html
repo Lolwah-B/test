@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNO Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>UNO Game</h1>
+
+        <!-- Game Status -->
+        <div class="game-status">
+            <div id="current-player">Current Turn: Player</div>
+            <div id="game-message"></div>
+        </div>
+
+        <!-- Computer's Hand (hidden) -->
+        <div class="computer-hand">
+            <h3>Computer (<span id="computer-count">7</span> cards)</h3>
+            <div id="computer-cards" class="card-container">
+                <!-- Computer cards will be displayed here -->
+            </div>
+        </div>
+
+        <!-- Game Table -->
+        <div class="game-table">
+            <div class="deck-area">
+                <div id="draw-pile" class="card-pile">
+                    <div class="card card-back">DRAW</div>
+                </div>
+                <div id="discard-pile" class="card-pile">
+                    <!-- Current card will be displayed here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Player's Hand -->
+        <div class="player-hand">
+            <h3>Your Hand</h3>
+            <div id="player-cards" class="card-container">
+                <!-- Player cards will be displayed here -->
+            </div>
+        </div>
+
+        <!-- Color Picker Modal -->
+        <div id="color-picker" class="modal">
+            <div class="modal-content">
+                <button class="close-modal" id="close-color-picker">&times;</button>
+                <h3>Choose a Color</h3>
+                <div class="color-buttons">
+                    <button class="color-btn red" data-color="red">Red</button>
+                    <button class="color-btn yellow" data-color="yellow">Yellow</button>
+                    <button class="color-btn green" data-color="green">Green</button>
+                    <button class="color-btn blue" data-color="blue">Blue</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- New Game Button -->
+        <button id="new-game-btn">New Game</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
